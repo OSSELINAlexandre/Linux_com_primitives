@@ -6,13 +6,11 @@
 #define bufSize 170
 
 pid_t ret;
-int count = 0;
-int steps = 10;
 char inheritance[70] = "Writing in a file some text before son is created.\n";
 char son[100] = "I am the son and writing in the file from my inherited file descriptor.\0\n";
 char buffer[bufSize];
 int fd;
-int i;
+
 
 int main (){
       
@@ -26,7 +24,7 @@ int main (){
 	}
 	write (fd, inheritance , strlen(inheritance));
        
-ret = fork();
+        ret = fork();
 
 if (ret == 0) {
 
