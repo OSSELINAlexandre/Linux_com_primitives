@@ -4,7 +4,6 @@
 
 pid_t ret;
 int aVariable = 9;
-char *thePath;
 
 int main()
 {

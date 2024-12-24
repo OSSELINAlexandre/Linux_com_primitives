@@ -5,5 +5,5 @@ echo
 echo '[Builder]: "'${folder}'" project.'
 echo
 
-cc -o exo1.exe exo1.c
+cc -o exo5.exe exo5.c
 cc -o codeReplacing.exe codeReplacing.c
