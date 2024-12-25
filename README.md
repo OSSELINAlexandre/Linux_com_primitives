@@ -1,24 +1,24 @@
 # Linux_com_primitives
 
-Utilization of Linux set of communication primitive built-in the OS.
+Utilization of Linux set's of communication primitive built-in the OS.
 ## "Fork"
 
 **Fork**, also known as *"heavy process"* duplicates in central memory every segment of the source code.
-Therefore, the forked process has its initialized and uninitialized data, code and library duplicated from the father processes. The management of both processes (father and son) are independant after the fork.
+Therefore, the forked process has its initialized and uninitialized data, code and library duplicated from the father process. The management of both processes (father and son) are independant after the fork.
 
-**Fork** is a main Linux primitive used by the OS's in order to create new processes.
+**Fork** is a main Linux primitive used by the OS's: every Linux proces (except the swapper process n°0) is created through this primirive.
 
-The *inittab* (process 0) will fork with all processes decalred in the initab conf file to create all necessary process for the OS to function.
+The *init* (process n°1) will fork  all decalred processes from the */etc/inittab* conf file to create all processes for the OS to function.
 
 ## "Replacement"
 
-**Replacement** is a set of primitive that replace the calling source code with the one provided as an argument. It can either be a command (which binary is placed in /bin) or a personal binary. After a call to a replacement primitive, every segment of the code, previously aforementioned, are replaced in central memory.
+**Replacement** is a set of primitive that replace the calling source code with the one provided as an argument of the primitive. It can either be a built-in command (which binary is placed in */bin*) or a personal binary. After a call to a replacement primitive, every segment of the code, that were previously aforementioned, are replaced in central memory.
 
 **Replacement** and **fork** are two basics fonctionalities, and it is the way a command can be executed from the prompt.
 
-First, the bash process fork its own source code, then it replaced the son's with the provided command from prompt.
+First, the bash process fork, then it replace the son's code with the one provided by the command from prompt.
 
 ## "Threads"
 
-**Threads** are also known as *"light process"*. Data and code section aren't duplicated and are the same one in central memory for all threads. However, the OS keep tracks of each thread by saving all states of register and stack for each threads.
+**Threads** are also known as *"light process"*. Data and code sections aren't duplicated and are the same one in central memory for all threads created by a father. However, the OS keep tracks of each thread by saving all states of register and stack for every threads.
 
