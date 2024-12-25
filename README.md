@@ -8,7 +8,7 @@ Therefore, the forked process has its initialized and uninitialized data, code a
 
 **Fork** is a main Linux primitive used by the OS's: every Linux process (except the swapper process n°0) is created through this primitive.
 
-The *init* (process n°1) will fork all decalred processes from the */etc/inittab* conf file to create all processes for the OS to function.
+The *init* (process n°1) will fork all declared processes from the */etc/inittab* conf file to create all processes for the OS to function.
 
 ## "Replacement"
 
