@@ -1,7 +1,10 @@
 # Linux_com_primitives
 
 Utilization of Linux set's of communication primitive built-in the OS.
-## "Fork"
+
+## The primitives used to execute code
+
+## Fork
 
 **Fork**, also known as *"heavy process"* duplicates in central memory every segment of the source code.
 Therefore, the forked process has its initialized and uninitialized data, code and library duplicated from the father process. The management of both processes (father and son) are independant after the fork.
@@ -10,7 +13,7 @@ Therefore, the forked process has its initialized and uninitialized data, code a
 
 The *init* (process n°1) will fork all declared processes from the */etc/inittab* conf file to create all processes for the OS to function.
 
-## "Replacement"
+## Replacement
 
 **Replacement** is a set of primitive that replace the calling source code with the one provided as an argument of the primitive. It can either be a built-in command (which binary is placed in */bin*) or a personal binary. After a call to a replacement primitive, every segment of the code, that were previously aforementioned, are replaced in central memory.
 
@@ -18,7 +21,24 @@ The *init* (process n°1) will fork all declared processes from the */etc/initta
 
 First, the bash process fork, then it replaces the son's code with the one provided by the command from prompt.
 
-## "Threads"
+## Threads
 
 **Threads** are also known as *"light process"*. Data and code sections aren't duplicated and are the same one in central memory for all threads created by a process. However, the OS keep tracks of each thread by saving all states of register and stack for every threads.
+
+## Communication between processes
+
+A process has its own segments (code, data, library) that is protected from other processes: it cannot communicate with other processes.
+
+It exists two categories of primitives in order to establish a communication between two isolated processes :
+
+	-Either by the file management system (with the pipes or sockets).
+	-Or by the IPC tools provided by the OS (semaphore, message queue or with shared segment).
+
+Sockets are used for inter machine communication whereas the other tools are used for a same machine. 
+	
+## Pipes
+
+
+
+
 
