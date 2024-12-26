@@ -5,6 +5,7 @@
 #include <string.h>
 
 pid_t ret1, ret2;
+int fileDescriptorAnonymous[2];
 char firstMsg[30]  = "\tMessage from the Father.\n";
 char secondMsg[30]  = "\tMessage from the Son.\n";
 char buffer[75];
@@ -14,10 +15,6 @@ int main()
     printf("Two strings are going to be communicated:\n");
     printf("\t-one from the father to a son.\n");
     printf("\t-a second from a son to another son.\n\n");
-    
-    
-    int fileDescriptorAnonymous[2];
-    char buf[20];
     
     pipe (fileDescriptorAnonymous);
     ret1 = fork();
