@@ -156,7 +156,7 @@ void treatReservation(){
 
 /*
 The management of reservation or consultation is done by two different threads.
-Thereofre, the server can continue the reading of the queue whislt a thread computes. 
+Therefore, the server can continue the reading of the queue whilst a thread computes. 
 */
 void manageReception(bool consultation, bool reservation){
    printf("\t\t[Server]:manageReception\n");
