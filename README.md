@@ -40,11 +40,11 @@ Sockets are used for inter machine communication whereas the other tools are use
 
 ## msgQueue
 
-the message queue is an inter-process communication tools. It provide a solution to communication structures through processes.
+the message queue is an inter-process communication tool. It provides a solution to communication structures through processes.
 
-I use this tools for a simple booking theater system. The software is separated in a basic server-client architecture. I use the message to exchange the informations related to the reservation or consultation of theater shows. 
+I use this tools for a simple booking theater system. The software is separated in a basic server-client architecture. I use the message to exchange the informations related to the reservation or consultation of theater shows, and the information realted to a given show. 
 
-Message queue are bi-directional, identified by an id and fairly and fun to use.
+Message queue's are bi-directional, identified by an id and fairly simple and fun to use.
 
 
 
