@@ -1,6 +1,6 @@
 # Linux_com_primitives
 
-Utilization of Linux set's of communication primitive built-in the OS.
+Utilization of Linux set's of built-in communication primitive.
 
 ## The primitives used to execute code
 
@@ -27,7 +27,7 @@ First, the bash process fork, then it replaces the son's code with the one provi
 
 ## Communication between processes
 
-A process has its own segments (code, data, library) that is protected from other processes: it cannot communicate with other processes.
+A process has its own segments (code, data, library) that is protected from other processes: it cannot communicates with other processes.
 
 It exists two categories of primitives in order to establish a communication between two isolated processes :
 
@@ -37,6 +37,15 @@ It exists two categories of primitives in order to establish a communication bet
 Sockets are used for inter machine communication whereas the other tools are used for a same machine. 
 	
 ## Pipes
+
+## msgQueue
+
+the message queue is an inter-process communication tools. It provide a solution to communication structures through processes.
+
+I use this tools for a simple booking theater system. The software is separated in a basic server-client architecture. I use the message to exchange the informations related to the reservation or consultation of theater shows. 
+
+Message queue are bi-directional, identified by an id and fairly and fun to use.
+
 
 
 

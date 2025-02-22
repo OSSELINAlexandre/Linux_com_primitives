@@ -79,7 +79,7 @@ void treatSpecificConsultation () {
    struct msgServerConsultation msgServer;
         
    if (msgrcv(queueIDResa, &messageClient, sizeof(struct msgClientConsultation) - sizeof(messageClient.mtype), idConsultationRequest, 0) == -1) {
-      perror("\t\t[Server][Error]:treatSpecificConsultation - réception.\n");
+      perror("\t\t[Server][Error]:treatSpecificConsultation - receipt.\n");
    }
         
    struct pieceTheater showConsulted = tableInMemory[messageClient.IDpiece];
@@ -141,14 +141,14 @@ void treatSpecificReservation() {
 }
 
 void treatConsultation() {
-   printf("\t\t[Server]:Consultation\n");
+   printf("\t\t[Server]:treatConsultation\n");
    
    sendPiecesInfo();
    treatSpecificConsultation();
 }
 
 void treatReservation(){
-   printf("\t\t[Server]:Reservation\n");
+   printf("\t\t[Server]:treatReservation\n");
    
    sendPiecesInfo();
    treatSpecificReservation();

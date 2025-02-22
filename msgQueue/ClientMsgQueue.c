@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include "definition.h"
 
-int choiceOfService, ShowChoice, userChoice, numberOfPlaces;
-int ShowChoiceFunc, numberOfPlacesFunc;
+int choiceOfService, showChoice, userChoice, numberOfPlaces;
+int showChoiceFunc, numberOfPlacesFunc;
 int queueIDResa;
 
 int secondClientChoice(){
@@ -24,9 +24,9 @@ int secondClientChoice(){
    }
 	
    printf ("Your choice : ");
-   scanf("%d", &ShowChoiceFunc);
+   scanf("%d", &showChoiceFunc);
        
-   return ShowChoiceFunc;
+   return showChoiceFunc;
 }
 
 int demandeClientNombreDePlaces(){
@@ -114,11 +114,11 @@ void sendReservation (int choice, int resa){
 void treatConsultation (int choiceOfService){
 
    sendClientChoice(choiceOfService);    
-   ShowChoice = secondClientChoice();
-   if (ShowChoice >= 0 && ShowChoice < nbPieces){
-      sendConsultation(ShowChoice);
+   showChoice = secondClientChoice();
+   if (showChoice >= 0 && showChoice < nbPieces){
+      sendConsultation(showChoice);
    }else{
-      printf ("[Client][Error] - Please enter a valid show ID, %d doesn't belong to the provided list.\n", ShowChoice);
+      printf ("[Client][Error] - Please enter a valid show ID, %d doesn't belong to the provided list.\n", showChoice);
    }
          
 }
@@ -126,12 +126,12 @@ void treatConsultation (int choiceOfService){
 void treatReservation (int choiceOfService){
 
    sendClientChoice(choiceOfService);
-   ShowChoice = secondClientChoice();
-   if (ShowChoice >= 0 && ShowChoice < nbPieces){
+   showChoice = secondClientChoice();
+   if (showChoice >= 0 && showChoice < nbPieces){
       numberOfPlaces = demandeClientNombreDePlaces();
-      sendReservation(ShowChoice, numberOfPlaces);
+      sendReservation(showChoice, numberOfPlaces);
    }else{
-      printf ("[Client][Error] - Please enter a valid show ID.\n",ShowChoice);
+      printf ("[Client][Error] - Please enter a valid show ID.\n",showChoice);
    }
 }
 
@@ -165,7 +165,7 @@ int main ()
          
       }else
       {
-         printf ("[Error] Please choose either '0' or '1'.\n");
+            printf ("[Error] Please choose either '0' or '1'.\n");
       }
    }
     
