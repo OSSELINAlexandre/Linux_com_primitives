@@ -46,7 +46,11 @@ I use this tools for a simple booking theater system. The software is separated 
 
 Message queue's are bi-directional, identified by an id and fairly simple and fun to use.
 
+## signals
 
+Another way to send informations to another process is through the signals. Exception are directly computed by the process, whereas signals are executed only once the process is re-elected. Once it is re-elected, the program first execute the signals to be computed for the given process. Said it in another way, it means that if you want to interupt a process that isn't relected for a while, you will need to wait this amount of time before the process end (contrary to the exception). 
+
+Signals needs a signal handler, and the posix implementation through signal is fairly easy to use. Once you created a handler for a peculiar signal, you can implement the behavior wanted. Once the signals are treated, the normal execution of the given process continues. 
 
 
 
