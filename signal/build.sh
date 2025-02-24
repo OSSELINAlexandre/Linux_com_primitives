@@ -5,5 +5,5 @@ echo
 echo '[Builder]: "'${folder}'" project.'
 echo
 
-cc -o signalHandler signalHandler.c 
+gcc -o signalHandler signalHandler.c 
 
