@@ -31,8 +31,8 @@ A process has its own segments (code, data, library) that is protected from othe
 
 It exists two categories of primitives in order to establish a communication between two isolated processes :
 
-	-Either by the file management system (with the pipes or sockets).
-	-Or by the IPC tools provided by the OS (semaphore, message queue or with shared segment).
+	=> Either by the file management system (with the pipes or sockets).
+	=> Or by the IPC tools provided by the OS (semaphore, message queue or with shared segment).
 
 Sockets are used for inter machine communication whereas the other tools are used for a same machine. 
 	
