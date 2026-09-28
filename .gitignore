@@ -1,3 +1,6 @@
+# Binaries produced by the Makefile (v1/ and v2/ demos)
+/build/
+
 # Prerequisites
 *.d
 
